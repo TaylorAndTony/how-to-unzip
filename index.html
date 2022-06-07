@@ -1,12 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>简明解压教程</title>
 </head>
+
 <body>
-    
+    <h1>一文搞定压缩包解压</h1>
+    <div id="content">
+        <h2>简介</h2>
+        <p class="text para">压缩包的解压是计算机基础技能。然而，在互联网上搜索解压教程，会发现他们大多数晦涩难懂，操作复杂。</p>
+        <p class="text para">出于各种不方便的教程和解压压缩包的必要性，此教程将专注于<strong>解压一个压缩包</strong>，专注于办公实际需求。</p>
+
+        <h2>解压一个压缩包</h2>
+        <p class="text">首先这是一个压缩包</p>
+        <img src="image/2.jpg" alt="" class="image">
+        <p class="text">用鼠标在上面右键点击</p>
+        <img src="image/3.jpg" alt="" class="image">
+        <p class="text">选择“解压到当前文件夹”</p>
+        <img src="image/4.jpg" alt="" class="image">
+        <p class="text note">
+            注：如果压缩包内文件过多，
+            也可选择“解压到 压缩包”选项。
+            (解压到当前文件夹下面的那个)
+            根据压缩包名称的不同，此选项名称不同。
+        </p>
+
+        <h2>查看结果</h2>
+        <p class="text">操作完成后，会出现压缩包内的文件，
+            或者出现一个文件夹。解压完成。</p>
+
+        <h2>附带链接</h2>
+        <a href="https://www.7-zip.org/">7-Zip 解压软件官网</a>
+        <div id="blank"></div>
+    </div>
+
+    <style>
+        :root {
+            --c1: #00796b;
+            --c2: #4db6ac;
+            --c3: #ec407a;
+            --text: #444;
+            --text2: #999;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--c3);
+            margin-right: 3rem;
+        }
+
+        html {
+            font-size: 24px;
+            color: var(--text);
+        }
+
+        #content {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            background-color: var(--c2);
+            color: white;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            height: 4rem;
+            line-height: 4rem;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            width: fit-content;
+            border-bottom: 3px solid var(--c1);
+            border-left: 12px solid var(--c1);
+            padding-left: 1rem;
+            padding-bottom: 5px;
+            padding-right: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            transition: .3s;
+        }
+
+        h2:hover {
+            border-bottom: 3px solid var(--c3);
+            border-left: 12px solid var(--c3);
+        }
+
+        .text {
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            padding-left: 1rem;
+        }
+
+        .para {
+            text-indent: 2rem;
+        }
+
+        .image {
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            /* style */
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            transition: .5s;
+        }
+
+        .image:hover {
+            border-radius: 0;
+        }
+
+        .note {
+            color: var(--text2);
+        }
+
+        #blank {
+            height: 300px;
+        }
+    </style>
 </body>
+
 </html>
