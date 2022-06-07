@@ -125,4 +125,5 @@ h2:hover {
     text-align: center;
     color: #888;
     margin-bottom: 40px;
+    cursor: pointer;
 }
