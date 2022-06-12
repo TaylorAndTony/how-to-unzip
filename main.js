@@ -1,3 +1,11 @@
+function showHidden() {
+    document.getElementById('hide-box').style.display = 'block';
+}
+
+function hideHidden() {
+    document.getElementById('hide-box').style.display = 'none';
+}
+
 class RandomSaying {
     constructor() {
         this.sayings = [
@@ -34,8 +42,10 @@ class RandomSaying {
     handleClickWitch(obj) {
         // log click count
         this.clickCount++;
-        if (this.clickCount > 30) {
-            obj.innerHTML = '<strong>我被玩坏啦！</strong>';
+        if (this.clickCount > 10) {
+            // Popup the hidden box
+            showHidden();
+            this.clickCount = 0;
             return;
         }
         // one roll is done
@@ -61,5 +71,6 @@ class RandomSaying {
 
 
 window.onload = function () {
-    new RandomSaying().mount('#witch');;
+    new RandomSaying().mount('#witch');
+
 }
