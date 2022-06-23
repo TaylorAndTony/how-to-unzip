@@ -81,6 +81,11 @@ function changeImage(imagePath) {
 function continualUpdateImage() {
     let now = 'h>v'
     setInterval(() =>{
+        let wrapper = document.querySelector('#auto-image');
+        if (wrapper.className === 'aimg-hide') {
+            wrapper.className = 'aimg-show';
+            return;
+        }
         let height = document.documentElement.clientHeight;
         let width = document.documentElement.clientWidth;
         if (height > width && now !== 'h>v') {
@@ -90,7 +95,7 @@ function continualUpdateImage() {
             now = 'h<v';
             changeImage('/image/banner-h.jpg');
         }
-    }, 2000)
+    }, 1000)
 }
 
 window.onload = function () {
