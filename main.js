@@ -68,9 +68,32 @@ class RandomSaying {
     };
 }
 
+function changeImage(imagePath) {
+    let img = document.querySelector('#auto-image-img');
+    let wrapper = document.querySelector('#auto-image');
+    wrapper.className = 'aimg-hide';
+    setTimeout(() =>{
+        img.src = imagePath;
+        wrapper.className = 'aimg-show';
+    }, 1000)
+}
 
+function continualUpdateImage() {
+    let now = 'h>v'
+    setInterval(() =>{
+        let height = document.documentElement.clientHeight;
+        let width = document.documentElement.clientWidth;
+        if (height > width && now !== 'h>v') {
+            now = 'h>v'
+            changeImage('/image/banner-v.jpg');
+        } else if (height < width && now !== 'h<v') {
+            now = 'h<v';
+            changeImage('/image/banner-h.jpg');
+        }
+    }, 2000)
+}
 
 window.onload = function () {
     new RandomSaying().mount('#witch');
-
+    continualUpdateImage();
 }
