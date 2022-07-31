@@ -102,7 +102,7 @@ h2:hover {
 
 .code {
     background-color: #eee;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-family: Consolas, "Liberation Mono", 'Microsoft YaHei', Courier, monospace, 'Arial';
     border-radius: 10px;
     padding: 2px;
     padding-left: 0.5rem;
