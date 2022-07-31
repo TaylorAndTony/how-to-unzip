@@ -88,10 +88,12 @@ function continualUpdateImage() {
         }
         let height = document.documentElement.clientHeight;
         let width = document.documentElement.clientWidth;
-        if (height > width && now !== 'h>v') {
+        let ratio = width / height;
+        let crit = 1.3;
+        if (ratio < crit && now !== 'h>v') {
             now = 'h>v'
             changeImage('/image/banner-v.jpg');
-        } else if (height < width && now !== 'h<v') {
+        } else if (ratio >= crit && now !== 'h<v') {
             now = 'h<v';
             changeImage('/image/banner-h.jpg');
         }
